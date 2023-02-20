@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"
+	prefix="og: https://ogp.me/ns#" >
+<!--  --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- / -->
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.html).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+	<title>Mercury Sable: Clicking Noise But Won’t Start – How to Fix Fast | Mlabs Info</title><link rel="stylesheet" href="../wp-content/cache/min/1/e70604f1aac9d7a66fbb0c7b470cf6a0.css" media="all" data-minify="1" />
+
+		<!--  -->
+		<meta name="description" content="Does your Mercury Sable have lights that come on and a clicking noise when you turn the key, but it won’t start? This article is meant to help you diagnose this exact scenario. The good news is that this is a fairly common no-start situation and is usually pretty easy to repair. A weak battery" />
+		<meta name="robots" content="max-image-preview:large" />
+		
+		
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="Mlabs Info | Auto Diagnosis and Troubleshooting" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="Mercury Sable: Clicking Noise But Won’t Start – How to Fix Fast | Mlabs Info" />
+		<meta property="og:description" content="Does your Mercury Sable have lights that come on and a clicking noise when you turn the key, but it won’t start? This article is meant to help you diagnose this exact scenario. The good news is that this is a fairly common no-start situation and is usually pretty easy to repair. A weak battery" />
+		<meta property="og:url" content="https://mlabs.info/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast/" />
+		<meta property="og:image" content="https://mlabs.info/wp-content/uploads/2020/06/Drivetrain-Resource-Logo-1.png" />
+		<meta property="og:image:secure_url" content="https://mlabs.info/wp-content/uploads/2020/06/Drivetrain-Resource-Logo-1.png" />
+		<meta property="article:published_time" content="2022-12-05T20:39:37+00:00" />
+		<meta property="article:modified_time" content="2022-12-05T20:39:37+00:00" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="Mercury Sable: Clicking Noise But Won’t Start – How to Fix Fast | Mlabs Info" />
+		<meta name="twitter:description" content="Does your Mercury Sable have lights that come on and a clicking noise when you turn the key, but it won’t start? This article is meant to help you diagnose this exact scenario. The good news is that this is a fairly common no-start situation and is usually pretty easy to repair. A weak battery" />
+		<meta name="twitter:image" content="https://mlabs.info/wp-content/uploads/2020/06/Drivetrain-Resource-Logo-1.png" />
+		<meta name="google" content="nositelinkssearchbox" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","@id":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/#article","name":"Mercury Sable: Clicking Noise But Won\u2019t Start \u2013 How to Fix Fast | Mlabs Info","headline":"Mercury Sable: Clicking Noise But Won\u2019t Start &#8211; How to Fix Fast","author":{"@id":"https:\/\/mlabs.info\/author\/staff-writers\/#author"},"publisher":{"@id":"https:\/\/mlabs.info\/#organization"},"image":{"@type":"ImageObject","url":"https:\/\/mlabs.info\/wp-content\/uploads\/2022\/12\/No-Start-Clicking-Sound.jpg","@id":"https:\/\/mlabs.info\/#articleImage","width":2178,"height":546},"datePublished":"2022-12-05T20:39:37-06:00","dateModified":"2022-12-05T20:39:37-06:00","inLanguage":"en-US","mainEntityOfPage":{"@id":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/#webpage"},"isPartOf":{"@id":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/#webpage"},"articleSection":"Mercury Sable"},{"@type":"BreadcrumbList","@id":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/mlabs.info\/#listItem","position":1,"item":{"@type":"WebPage","@id":"https:\/\/mlabs.info\/","name":"Home","description":"Here you will find anything that you'll need to know about the 700R4 transmission. A site dedicated to GM Automatic transmissions","url":"https:\/\/mlabs.info\/"},"nextItem":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/#listItem"},{"@type":"ListItem","@id":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/#listItem","position":2,"item":{"@type":"WebPage","@id":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/","name":"Mercury Sable: Clicking Noise But Won\u2019t Start - How to Fix Fast","description":"Does your Mercury Sable have lights that come on and a clicking noise when you turn the key, but it won\u2019t start? This article is meant to help you diagnose this exact scenario. The good news is that this is a fairly common no-start situation and is usually pretty easy to repair. A weak battery","url":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/"},"previousItem":"https:\/\/mlabs.info\/#listItem"}]},{"@type":"Organization","@id":"https:\/\/mlabs.info\/#organization","name":"Mlabs Info","url":"https:\/\/mlabs.info\/","logo":{"@type":"ImageObject","url":"https:\/\/mlabs.info\/wp-content\/uploads\/2020\/06\/Drivetrain-Resource-Logo-1.png","@id":"https:\/\/mlabs.info\/#organizationLogo","width":1519,"height":294,"caption":"Mlabs Info: Auto Diagnosis Help"},"image":{"@id":"https:\/\/mlabs.info\/#organizationLogo"}},{"@type":"Person","@id":"https:\/\/mlabs.info\/author\/staff-writers\/#author","url":"https:\/\/mlabs.info\/author\/staff-writers\/","name":"DTR Staff","image":{"@type":"ImageObject","@id":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/#authorImage","url":"https:\/\/secure.gravatar.com\/avatar\/84097f7023db5e299449ecb68dfecf23?s=96&d=mm&r=g","width":96,"height":96,"caption":"DTR Staff"}},{"@type":"WebPage","@id":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/#webpage","url":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/","name":"Mercury Sable: Clicking Noise But Won\u2019t Start \u2013 How to Fix Fast | Mlabs Info","description":"Does your Mercury Sable have lights that come on and a clicking noise when you turn the key, but it won\u2019t start? This article is meant to help you diagnose this exact scenario. The good news is that this is a fairly common no-start situation and is usually pretty easy to repair. A weak battery","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/mlabs.info\/#website"},"breadcrumb":{"@id":"https:\/\/mlabs.info\/mercury-sable-clicking-noise-but-wont-start-how-to-fix-fast\/#breadcrumblist"},"author":{"@id":"https:\/\/mlabs.info\/author\/staff-writers\/#author"},"creator":{"@id":"https:\/\/mlabs.info\/author\/staff-writers\/#author"},"datePublished":"2022-12-05T20:39:37-06:00","dateModified":"2022-12-05T20:39:37-06:00"},{"@type":"WebSite","@id":"https:\/\/mlabs.info\/#website","url":"https:\/\/mlabs.info\/","name":"Mlabs Info","description":"Auto Diagnosis and Troubleshooting","inLanguage":"en-US","publisher":{"@id":"https:\/\/mlabs.info\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='dns-prefetch' href='http://scripts.mediavine.com/' />
+
+<link rel="alternate" type="application/rss+xml" title="Mlabs Info &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Mlabs Info &raquo; Comments Feed" href="../comments/feed/index.html" />
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+
+
+
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--contrast: var(--contrast);--wp--preset--color--contrast-2: var(--contrast-2);--wp--preset--color--contrast-3: var(--contrast-3);--wp--preset--color--base: var(--base);--wp--preset--color--base-2: var(--base-2);--wp--preset--color--base-3: var(--base-3);--wp--preset--color--accent: var(--accent);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+
+
+
+<style id='generate-style-inline-css'>
+body{background-color:#ffffff;color:#3a3a3a;}a{color:#1e73be;}a:hover, a:focus, a:active{color:#000000;}.grid-container{max-width:1100px;}.wp-block-group__inner-container{max-width:1100px;margin-left:auto;margin-right:auto;}.site-header .header-image{width:350px;}:root{--contrast:#222222;--contrast-2:#575760;--contrast-3:#b2b2be;--base:#f0f0f0;--base-2:#f7f8f9;--base-3:#ffffff;--accent:#1e73be;}.has-contrast-color{color:var(--contrast);}.has-contrast-background-color{background-color:var(--contrast);}.has-contrast-2-color{color:var(--contrast-2);}.has-contrast-2-background-color{background-color:var(--contrast-2);}.has-contrast-3-color{color:var(--contrast-3);}.has-contrast-3-background-color{background-color:var(--contrast-3);}.has-base-color{color:var(--base);}.has-base-background-color{background-color:var(--base);}.has-base-2-color{color:var(--base-2);}.has-base-2-background-color{background-color:var(--base-2);}.has-base-3-color{color:var(--base-3);}.has-base-3-background-color{background-color:var(--base-3);}.has-accent-color{color:var(--accent);}.has-accent-background-color{background-color:var(--accent);}body, button, input, select, textarea{font-size:18px;}body{line-height:1.5;}.entry-content > [class*="wp-block-"]:not(:last-child){margin-bottom:1.5em;}.main-title{font-size:45px;}.main-navigation .main-nav ul ul li a{font-size:14px;}.sidebar .widget, .footer-widgets .widget{font-size:17px;}h1{font-weight:400;font-size:40px;}h2{font-weight:700;font-size:30px;}h3{font-weight:500;font-size:25px;}h4{font-size:inherit;}h5{font-size:inherit;}@media (max-width:768px){.main-title{font-size:30px;}h1{font-size:31px;}h2{font-size:27px;}}.top-bar{background-color:#636363;color:#ffffff;}.top-bar a{color:#ffffff;}.top-bar a:hover{color:#303030;}.site-header{background-color:#ffffff;color:#3a3a3a;}.site-header a{color:#3a3a3a;}.main-title a,.main-title a:hover{color:#222222;}.site-description{color:#757575;}.main-navigation,.main-navigation ul ul{background-color:#222222;}.main-navigation .main-nav ul li a, .main-navigation .menu-toggle, .main-navigation .menu-bar-items{color:#ffffff;}.main-navigation .main-nav ul li:not([class*="current-menu-"]):hover > a, .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"]) > a, .main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{color:#ffffff;background-color:#3f3f3f;}button.menu-toggle:hover,button.menu-toggle:focus{color:#ffffff;}.main-navigation .main-nav ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#3f3f3f;}.navigation-search input[type="search"],.navigation-search input[type="search"]:active, .navigation-search input[type="search"]:focus, .main-navigation .main-nav ul li.search-item.active > a, .main-navigation .menu-bar-items .search-item.active > a{color:#ffffff;background-color:#3f3f3f;}.main-navigation ul ul{background-color:#3f3f3f;}.main-navigation .main-nav ul ul li a{color:#ffffff;}.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover > a,.main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus > a, .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"]) > a{color:#ffffff;background-color:#4f4f4f;}.main-navigation .main-nav ul ul li[class*="current-menu-"] > a{color:#ffffff;background-color:#4f4f4f;}.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .one-container .container, .separate-containers .paging-navigation, .inside-page-header{background-color:#ffffff;}.entry-meta{color:#595959;}.entry-meta a{color:#595959;}.entry-meta a:hover{color:#1e73be;}.sidebar .widget{background-color:#ffffff;}.sidebar .widget .widget-title{color:#000000;}.footer-widgets{background-color:#ffffff;}.footer-widgets .widget-title{color:#000000;}.site-info{color:#ffffff;background-color:#222222;}.site-info a{color:#ffffff;}.site-info a:hover{color:#606060;}.footer-bar .widget_nav_menu .current-menu-item a{color:#606060;}input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="tel"],input[type="number"],textarea,select{color:#666666;background-color:#fafafa;border-color:#cccccc;}input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="number"]:focus,textarea:focus,select:focus{color:#666666;background-color:#ffffff;border-color:#bfbfbf;}button,html input[type="button"],input[type="reset"],input[type="submit"],a.button,a.wp-block-button__link:not(.has-background){color:#ffffff;background-color:#666666;}button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,a.button:hover,button:focus,html input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,a.button:focus,a.wp-block-button__link:not(.has-background):active,a.wp-block-button__link:not(.has-background):focus,a.wp-block-button__link:not(.has-background):hover{color:#ffffff;background-color:#3f3f3f;}a.generate-back-to-top{background-color:rgba( 0,0,0,0.4 );color:#ffffff;}a.generate-back-to-top:hover,a.generate-back-to-top:focus{background-color:rgba( 0,0,0,0.6 );color:#ffffff;}@media (max-width:768px){.main-navigation .menu-bar-item:hover > a, .main-navigation .menu-bar-item.sfHover > a{background:none;color:#ffffff;}}.inside-top-bar{padding:10px;}.inside-top-bar.grid-container{max-width:1120px;}.inside-header{padding:40px;}.inside-header.grid-container{max-width:1180px;}.site-main .wp-block-group__inner-container{padding:40px;}.separate-containers .paging-navigation{padding-top:20px;padding-bottom:20px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-40px;width:calc(100% + 80px);max-width:calc(100% + 80px);}.rtl .menu-item-has-children .dropdown-menu-toggle{padding-left:20px;}.rtl .main-navigation .main-nav ul li.menu-item-has-children > a{padding-right:20px;}.footer-widgets-container.grid-container{max-width:1180px;}.inside-site-info{padding:20px;}.inside-site-info.grid-container{max-width:1140px;}@media (max-width:768px){.separate-containers .inside-article, .separate-containers .comments-area, .separate-containers .page-header, .separate-containers .paging-navigation, .one-container .site-content, .inside-page-header{padding:30px;}.site-main .wp-block-group__inner-container{padding:30px;}.inside-site-info{padding-right:10px;padding-left:10px;}.entry-content .alignwide, body:not(.no-sidebar) .entry-content .alignfull{margin-left:-30px;width:calc(100% + 60px);max-width:calc(100% + 60px);}.one-container .site-main .paging-navigation{margin-bottom:20px;}}/* End cached CSS */.is-right-sidebar{width:30%;}.is-left-sidebar{width:30%;}.site-content .content-area{width:70%;}@media (max-width:768px){.main-navigation .menu-toggle,.sidebar-nav-mobile:not(#sticky-placeholder){display:block;}.main-navigation ul,.gen-sidebar-nav,.main-navigation:not(.slideout-navigation):not(.toggled) .main-nav > ul,.has-inline-mobile-toggle #site-navigation .inside-navigation > *:not(.navigation-search):not(.main-nav){display:none;}.nav-align-right .inside-navigation,.nav-align-center .inside-navigation{justify-content:space-between;}}
+</style>
+
+
+<script src='../wp-includes/js/jquery/jquery.mina7a0.js?ver=3.6.1' id='jquery-core-js'></script>
+<script src='../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+<script src='../wp-includes/js/dist/vendor/regenerator-runtime.min3937.js?ver=0.13.9' id='regenerator-runtime-js' defer></script>
+<script src='../wp-includes/js/dist/vendor/wp-polyfill.min2c7c.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script src='../wp-includes/js/dist/dom-ready.minded6.js?ver=392bdd43726760d1f3ca' id='wp-dom-ready-js' defer></script>
+<script data-minify="1" src='../wp-content/cache/min/1/wp-content/plugins/auto-terms-of-service-and-privacy-policy/js/base38d1.js?ver=1651522398' id='wpautoterms_base-js' defer></script>
+<script async="async" data-noptimize="1" data-cfasync="false" src='../../scripts.mediavine.com/tags/drivetrain-resource6a4d.js?ver=6.1.1' id='mv-script-wrapper-js'></script>
+<link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" type="application/json" href="../wp-json/wp/v2/posts/295869.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" />
+
+
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed3a4d.json?url=https%3A%2F%2Fmlabs.info%2Fmercury-sable-clicking-noise-but-wont-start-how-to-fix-fast%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed92b2?url=https%3A%2F%2Fmlabs.info%2Fmercury-sable-clicking-noise-but-wont-start-how-to-fix-fast%2F&amp;format=xml" />
+<style type="text/css">.aawp .aawp-tb__row--highlight{background-color:#256aaf;}.aawp .aawp-tb__row--highlight{color:#256aaf;}.aawp .aawp-tb__row--highlight a{color:#256aaf;}</style><!-- Global site tag (gtag.js) - Google Analytics -->
+
+	<style>img#wpstats{display:none}</style>
+		<link rel="icon" href="../wp-content/uploads/2020/02/cropped-Drivetrain-Resource-2-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="../wp-content/uploads/2020/02/cropped-Drivetrain-Resource-2-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../wp-content/uploads/2020/02/cropped-Drivetrain-Resource-2-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://mlabs.info/wp-content/uploads/2020/02/cropped-Drivetrain-Resource-2-1-270x270.png" />
+		<style id="wp-custom-css">
+			/* Begin Mediavine Sidebar fix */
+@media only screen and (min-width: 769px){
+    #primary {
+        max-width: calc(100% - 330px);
+    }
+    #right-sidebar {
+        min-width: 300px !important;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .inside-article {
+        padding: 10px !important;
+    }
+}
+/* End Mediavine Sidebar Fix */
+@media only screen and (max-width: 399px) { .entry-content > table{ font-size: 14px; } }
+		</style>
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+<body class="post-template-default single single-post postid-295869 single-format-standard wp-custom-logo wp-embed-responsive aawp-custom right-sidebar nav-below-header separate-containers header-aligned-left dropdown-hover" itemtype="https://schema.org/Blog" itemscope>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<header class="site-header" id="masthead" aria-label="Site"  itemtype="https://schema.org/WPHeader" itemscope>
+			<div class="inside-header grid-container">
+							</div>
+		</header>
+				<nav class="main-navigation grid-container sub-menu-right" id="site-navigation" aria-label="Primary"  itemtype="https://schema.org/SiteNavigationElement" itemscope>
+			<div class="inside-navigation">
+								<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" /></svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" /></svg></span><span class="mobile-menu">Menu</span>				</button>
+				<div id="primary-menu" class="main-nav"><ul id="menu-main-menu" class=" menu sf-menu"><li id="menu-item-32673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-32673"><a href="../index.html">Home</a></li>
+
+
+
+</ul></div>			</div>
+		</nav>
+		
+	<div class="site grid-container container hfeed" id="page">
+				<div class="site-content" id="content">
+			
+	<div class="content-area" id="primary">
+		<main class="site-main" id="main">
+			
+<article id="post-295869" class="post-295869 post type-post status-publish format-standard hentry category-mercury-sable mv-content-wrapper" itemtype="https://schema.org/CreativeWork" itemscope>
+	<div class="inside-article">
+					<header class="entry-header" aria-label="Content">
+				<h1 class="entry-title" itemprop="headline">Mercury Sable: Clicking Noise But Won’t Start &#8211; How to Fix Fast</h1>		<div class="entry-meta">
+			<span class="posted-on"><time class="entry-date published" datetime="2022-12-05T14:39:37-06:00" itemprop="datePublished">December 5, 2022</time></span> <span class="byline">by <span class="author vcard" itemprop="author" itemtype="https://schema.org/Person" itemscope><a class="url fn n" href="../author/staff-writers/index.html" title="View all posts by DTR Staff" rel="author" itemprop="url"><span class="author-name" itemprop="name">DTR Staff</span></a></span></span> 		</div>
+					</header>
+			
+		<div class="entry-content" itemprop="text">
+			
+<figure class="wp-block-image size-large"><a href="../wp-content/uploads/2022/12/No-Start-Clicking-Sound.jpg"><picture decoding="async" class="wp-image-295494">
+<source type="image/webp" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-1024x257.jpg.webp 1024w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-300x75.jpg.webp 300w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-768x193.jpg.webp 768w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-1536x385.jpg.webp 1536w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-2048x513.jpg.webp 2048w" srcset="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%201024%20257&#039;%3E%3C/svg%3E" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px"/>
+<img decoding="async" width="1024" height="257" src="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%201024%20257&#039;%3E%3C/svg%3E" alt="" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-1024x257.jpg 1024w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-300x75.jpg 300w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-768x193.jpg 768w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-1536x385.jpg 1536w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-2048x513.jpg 2048w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="../wp-content/uploads/2022/12/No-Start-Clicking-Sound-1024x257.jpg"/>
+</picture>
+<noscript><picture decoding="async" class="wp-image-295494">
+<source type="image/webp" srcset="https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-1024x257.jpg.webp 1024w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-300x75.jpg.webp 300w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-768x193.jpg.webp 768w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-1536x385.jpg.webp 1536w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-2048x513.jpg.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px"/>
+<img decoding="async" width="1024" height="257" src="../wp-content/uploads/2022/12/No-Start-Clicking-Sound-1024x257.jpg" alt="" srcset="https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-1024x257.jpg 1024w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-300x75.jpg 300w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-768x193.jpg 768w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-1536x385.jpg 1536w, https://mlabs.info/wp-content/uploads/2022/12/No-Start-Clicking-Sound-2048x513.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"/>
+</picture>
+</noscript></a></figure>
+
+
+
+<p>Does your Mercury Sable have lights that come on and a clicking noise when you turn the key, but it won’t start? This article is meant to help you diagnose this exact scenario. </p>
+
+
+
+<p>The good news is that this is a fairly common no-start situation and is usually pretty easy to repair.&nbsp;<strong> A weak battery is the most common cause</strong> of no start and a clicking sound.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Diagnosis</h2>
+
+
+
+<h3>Quick Diagnosis Chart</h3>
+
+
+<figure class="wp-block-image size-large"><a href="../wp-content/uploads/2022/09/Mercury-Sable.jpg"><picture decoding="async" class="wp-image-272097">
+<source type="image/webp" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-1024x368.jpg.webp 1024w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-300x108.jpg.webp 300w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-768x276.jpg.webp 768w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-1536x552.jpg.webp 1536w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable.jpg.webp 1680w" srcset="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%201024%20368&#039;%3E%3C/svg%3E" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px"/>
+<img decoding="async" width="1024" height="368" src="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%201024%20368&#039;%3E%3C/svg%3E" alt="Mercury Sable Clicking Won&#039;t Start" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-1024x368.jpg 1024w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-300x108.jpg 300w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-768x276.jpg 768w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-1536x552.jpg 1536w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable.jpg 1680w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="../wp-content/uploads/2022/09/Mercury-Sable-1024x368.jpg"/>
+</picture>
+<noscript><picture decoding="async" class="wp-image-272097">
+<source type="image/webp" srcset="https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-1024x368.jpg.webp 1024w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-300x108.jpg.webp 300w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-768x276.jpg.webp 768w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-1536x552.jpg.webp 1536w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable.jpg.webp 1680w" sizes="(max-width: 1024px) 100vw, 1024px"/>
+<img decoding="async" width="1024" height="368" src="../wp-content/uploads/2022/09/Mercury-Sable-1024x368.jpg" alt="Mercury Sable Clicking Won&#039;t Start" srcset="https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-1024x368.jpg 1024w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-300x108.jpg 300w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-768x276.jpg 768w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable-1536x552.jpg 1536w, https://mlabs.info/wp-content/uploads/2022/09/Mercury-Sable.jpg 1680w" sizes="(max-width: 1024px) 100vw, 1024px"/>
+</picture>
+</noscript></a></figure>
+
+
+<figure class="wp-block-table is-style-stripes"><table><thead><tr><th>Cause</th><th>Clicking Sound</th><th>Notes</th></tr></thead><tbody><tr><td>Low Battery</td><td>Fast clicking</td><td>Caused by a bad alternator, Battery that can&#8217;t hold a charge, or slow drain</td></tr><tr><td>Corroded Battery Terminals</td><td>Fast clicking</td><td>There&#8217;ll be obvious corrosion on the battery</td></tr><tr><td>Loose Terminal</td><td>Fast clicking</td><td>Movable by hand</td></tr><tr><td>Alternator</td><td>Fast or slow</td><td>Battery light turns on while driving</td></tr><tr><td>Starter</td><td>One big clunk</td><td>Hammering it may get it to work</td></tr></tbody></table></figure>
+
+
+
+<p>Here we&#8217;ve listed a few things that can help you narrow down why your Sable clicks but doesn&#8217;t start. </p>
+
+
+
+<h3>Did the Battery Light Come on While Driving?</h3>
+
+
+
+<figure class="wp-block-image size-full"><a href="../wp-content/uploads/2021/01/shutterstock_369625247.jpg"><img decoding="async" width="500" height="334" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20334'%3E%3C/svg%3E" alt="Battery Light on Clicking Won't start Mercury Sable" class="wp-image-177889" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2021/01/shutterstock_369625247.jpg 500w, https://mlabs.info/wp-content/uploads/2021/01/shutterstock_369625247-300x200.jpg 300w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="../wp-content/uploads/2021/01/shutterstock_369625247.jpg" /><noscript><img decoding="async" width="500" height="334" src="../wp-content/uploads/2021/01/shutterstock_369625247.jpg" alt="Battery Light on Clicking Won't start Mercury Sable" class="wp-image-177889" srcset="https://mlabs.info/wp-content/uploads/2021/01/shutterstock_369625247.jpg 500w, https://mlabs.info/wp-content/uploads/2021/01/shutterstock_369625247-300x200.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" /></noscript></a></figure>
+
+
+
+<p>An alternator that hasn’t charged the battery enough to provide sufficient voltage for the next start can cause your car to click but not start, even if the lights are still on.&nbsp; </p>
+
+
+
+<p>The battery or alternator light coming on while driving is good anecdotal evidence that the alternator has gone bad. It&#8217;ll usually come on when your Mercury Sable&#8217;s charging system <strong>voltage drops below 13.5 volts</strong>.</p>
+
+
+
+<p>If your <a href="../mercury-sable-battery-light/index.html" title="Mercury Sable: Battery Light On – Diagnosis">Sable&#8217;s battery or alternator light came on</a> while driving the last time it ran, and now it won&#8217;t start, that’s a strong indication that your car&#8217;s alternator couldn’t charge the battery enough.&nbsp; </p>
+
+
+
+<p>You can test it with a multimeter (see below).<br>&nbsp;</p>
+
+
+
+<h3>Is it Clicking or Clunking?</h3>
+
+
+
+<figure class="wp-block-image size-full"><a href="../wp-content/uploads/2019/10/Key-Stuck-Ignition.jpg"><img decoding="async" width="862" height="458" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20862%20458'%3E%3C/svg%3E" alt="Clicking vs clunking car won't start Mercury Sable
+" class="wp-image-101703" data-lazy-src="../wp-content/uploads/2019/10/Key-Stuck-Ignition.jpg"/><noscript><img decoding="async" width="862" height="458" src="../wp-content/uploads/2019/10/Key-Stuck-Ignition.jpg" alt="Clicking vs clunking car won't start Mercury Sable
+" class="wp-image-101703"/></noscript></a></figure>
+
+
+
+<figure class="wp-block-audio"><audio controls src="../wp-content/uploads/2022/09/Car-Clicking-Wont-Start.mp3"></audio><figcaption class="wp-element-caption"><br>There’s a big difference between a rapid clicking noise and a single loud click/clunk when you go to start your Sable.<br><br>A rapid clicking sound is likely a battery-related issue. There&#8217;s an audio file above that you can listen to. That&#8217;s usually a discharged battery or battery terminal issue.</figcaption></figure>
+
+
+
+<p>If you hear a single clunk when you turn the key, it can still be the battery, but it&#8217;s more likely a starter.&nbsp; A series of rapid clicks is usually battery related.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Try this First</h2>
+
+
+
+<p>Turn everything off that requires electricity in your Sable.&nbsp; Every electrical system draws amperage from the battery.&nbsp; If it&#8217;s just a little too low on juice to crank the starter, you might be able to turn your vehicle over by temporarily disabling the following:</p>
+
+
+
+<ul>
+<li>Automatic headlights</li>
+
+
+
+<li>Stereo</li>
+
+
+
+<li>Climate control</li>
+
+
+
+<li>Dome light (just make sure the door is closed)</li>
+</ul>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>No Start But Lights Come On/Clicking Causes</h2>
+
+
+
+<p>A weak battery is the most common cause of a <a href="../car-wont-start-but-lights-come-on-with-a-clicking-noise-common-causes/index.html" title="Car Won’t Start But Lights Come on With a Clicking Noise: Common Causes">no-start and clicking condition</a> in the Mercury Sable.&nbsp; We’ve listed the causes and things you can check in an order you can check in a parking lot if you’re stranded. </p>
+
+
+
+<h3>1. Loose or Corroded Battery Posts/Terminals (Likely)</h3>
+
+
+
+<p>The first thing you should do is check the battery cables at the terminals.&nbsp; The terminals are what connect the battery to your car&#8217;s starter and wiring harness.</p>
+
+
+
+<h4><strong>Loose Battery Terminal</strong></h4>
+
+
+
+<figure class="wp-block-image alignnone"><a href="../wp-content/uploads/2022/09/Loose-Battery-Terminal.jpg"><picture decoding="async" class="wp-image-274715">
+<source type="image/webp" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/09/Loose-Battery-Terminal.jpg.webp 500w, https://mlabs.info/wp-content/uploads/2022/09/Loose-Battery-Terminal-300x200.jpg.webp 300w" srcset="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%20500%20334&#039;%3E%3C/svg%3E" data-lazy-sizes="(max-width: 500px) 100vw, 500px"/>
+<img decoding="async" width="500" height="334" src="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%20500%20334&#039;%3E%3C/svg%3E" alt="Clicking While Starting" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/09/Loose-Battery-Terminal.jpg 500w, https://mlabs.info/wp-content/uploads/2022/09/Loose-Battery-Terminal-300x200.jpg 300w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="../wp-content/uploads/2022/09/Loose-Battery-Terminal.jpg"/>
+</picture>
+<noscript><picture decoding="async" class="wp-image-274715">
+<source type="image/webp" srcset="https://mlabs.info/wp-content/uploads/2022/09/Loose-Battery-Terminal.jpg.webp 500w, https://mlabs.info/wp-content/uploads/2022/09/Loose-Battery-Terminal-300x200.jpg.webp 300w" sizes="(max-width: 500px) 100vw, 500px"/>
+<img decoding="async" width="500" height="334" src="../wp-content/uploads/2022/09/Loose-Battery-Terminal.jpg" alt="Clicking While Starting" srcset="https://mlabs.info/wp-content/uploads/2022/09/Loose-Battery-Terminal.jpg 500w, https://mlabs.info/wp-content/uploads/2022/09/Loose-Battery-Terminal-300x200.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"/>
+</picture>
+</noscript></a><figcaption class="wp-element-caption">A loose battery terminal can cause this problem</figcaption></figure>
+
+
+
+<p class="has-text-align-center has-base-2-background-color has-background"><strong>Tools needed: Wrench</strong></p>
+
+
+
+<p>If your battery terminals aren’t corroded, grab them one at a time and see if they wiggle.&nbsp; They shouldn’t move at all.&nbsp; If they wiggle, they’ll need to be tightened.&nbsp;&nbsp;</p>
+
+
+
+<p>If you&#8217;re stranded without a wrench, push down and twist the loose terminal.&nbsp; Now, try starting your Sable.&nbsp; Repeat this process a few times until you can get it to bite and start.&nbsp; Once you get home, tighten the terminal properly.</p>
+
+
+
+<h4><strong>Corroded Battery Terminal/Posts</strong></h4>
+
+
+
+<figure class="wp-block-image size-full"><a href="../wp-content/uploads/2022/09/Corroded-Battery-Terminal.jpg"><picture decoding="async" class="wp-image-274713">
+<source type="image/webp" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/09/Corroded-Battery-Terminal.jpg.webp 500w, https://mlabs.info/wp-content/uploads/2022/09/Corroded-Battery-Terminal-300x200.jpg.webp 300w" srcset="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%20500%20334&#039;%3E%3C/svg%3E" data-lazy-sizes="(max-width: 500px) 100vw, 500px"/>
+<img decoding="async" width="500" height="334" src="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%20500%20334&#039;%3E%3C/svg%3E" alt="" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/09/Corroded-Battery-Terminal.jpg 500w, https://mlabs.info/wp-content/uploads/2022/09/Corroded-Battery-Terminal-300x200.jpg 300w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="../wp-content/uploads/2022/09/Corroded-Battery-Terminal.jpg"/>
+</picture>
+<noscript><picture decoding="async" class="wp-image-274713">
+<source type="image/webp" srcset="https://mlabs.info/wp-content/uploads/2022/09/Corroded-Battery-Terminal.jpg.webp 500w, https://mlabs.info/wp-content/uploads/2022/09/Corroded-Battery-Terminal-300x200.jpg.webp 300w" sizes="(max-width: 500px) 100vw, 500px"/>
+<img decoding="async" width="500" height="334" src="../wp-content/uploads/2022/09/Corroded-Battery-Terminal.jpg" alt="" srcset="https://mlabs.info/wp-content/uploads/2022/09/Corroded-Battery-Terminal.jpg 500w, https://mlabs.info/wp-content/uploads/2022/09/Corroded-Battery-Terminal-300x200.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"/>
+</picture>
+</noscript></a></figure>
+
+
+
+<p class="has-text-align-center"><strong>Tools needed: Wire brush, Wrench, Gloves</strong></p>
+
+
+
+<p><i>CAUTION: Battery acid can burn the eyes and skin, proceed at your own risk</i></p>
+
+
+
+<p>If your Sable&#8217;s battery posts are corroded, you’ll need to clean them off enough to get back on the road.&nbsp;&nbsp;</p>
+
+
+
+<p><strong>How to Clean a Battery Terminal</strong></p>
+
+
+
+<ol>
+<li>You’ll need a wrench to loosen the terminal(s).&nbsp; Always start by taking off your car&#8217;s <b>negative terminal first</b>.&nbsp; Make sure not to touch your wrench to both terminals at one time (you&#8217;ll get zapped).&nbsp; Don’t let the wrench hit bare metal when taking off the positive terminal (zapped).&nbsp;&nbsp;</li>
+
+
+
+<li>Next, move on to the post.&nbsp; You can use a wire brush or sandpaper if you’ve got some around.&nbsp; Most gas stations sell battery post cleaners or wire brushes.</li>
+
+
+
+<li>Put the newly cleaned positive terminal back on first, then move to the ground side.</li>
+</ol>
+
+
+
+<p>Once the corrosion is cleaned, put the battery terminals back on the posts and see if your Sable starts.&nbsp; If it does, make sure to let it run for a bit just in case the battery isn&#8217;t fully charged before shutting your car off.</p>
+
+
+
+<h3>2. Battery Insufficiently Charged (Most Common Cause)</h3>
+
+
+
+<figure class="wp-block-image size-full"><a href="../wp-content/uploads/2021/01/vehicle-battery.jpg"><img decoding="async" width="500" height="375" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20500%20375'%3E%3C/svg%3E" alt="" class="wp-image-177891" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2021/01/vehicle-battery.jpg 500w, https://mlabs.info/wp-content/uploads/2021/01/vehicle-battery-300x225.jpg 300w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="../wp-content/uploads/2021/01/vehicle-battery.jpg" /><noscript><img decoding="async" width="500" height="375" src="../wp-content/uploads/2021/01/vehicle-battery.jpg" alt="" class="wp-image-177891" srcset="https://mlabs.info/wp-content/uploads/2021/01/vehicle-battery.jpg 500w, https://mlabs.info/wp-content/uploads/2021/01/vehicle-battery-300x225.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" /></noscript></a></figure>
+
+
+
+<p>An insufficiently charged battery is the number one reason your Mercury Sable is clicking but refuses to start.&nbsp; When this happens, either the battery is bad and can’t hold a charge, or the alternator isn’t charging it enough.</p>
+
+
+
+<p>A battery’s main job is to provide enough electricity to power the starter motor.&nbsp; Once your car has started, the alternator can provide enough voltage to run everything.</p>
+
+
+
+<p>Your Sable&#8217;s battery voltage can get too low to turn the starter over, even if it is still powering the lights. A parasitic battery drain can also cause the battery to drain.</p>
+
+
+
+<p><b>Testing the Battery</b></p>
+
+
+
+<figure class="wp-block-image size-full"><a href="../wp-content/uploads/2019/06/Bad-Alternator-Diagnosis.jpg"><img decoding="async" width="300" height="300" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" alt="" class="wp-image-74058" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2019/06/Bad-Alternator-Diagnosis.jpg 300w, https://mlabs.info/wp-content/uploads/2019/06/Bad-Alternator-Diagnosis-150x150.jpg 150w" data-lazy-sizes="(max-width: 300px) 100vw, 300px" data-lazy-src="../wp-content/uploads/2019/06/Bad-Alternator-Diagnosis.jpg" /><noscript><img decoding="async" width="300" height="300" src="../wp-content/uploads/2019/06/Bad-Alternator-Diagnosis.jpg" alt="" class="wp-image-74058" srcset="https://mlabs.info/wp-content/uploads/2019/06/Bad-Alternator-Diagnosis.jpg 300w, https://mlabs.info/wp-content/uploads/2019/06/Bad-Alternator-Diagnosis-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px" /></noscript></a><figcaption class="wp-element-caption">A multimeter is the most effective tool for diagnosing a bad alternator/battery in the Mercury Sable.</figcaption></figure>
+
+
+
+<p>You can test your car&#8217;s battery, or you can have it tested.&nbsp; Here’s how to test it with a multimeter:</p>
+
+
+
+<ol>
+<li>Set the multimeter to volts and touch the negative and positive terminals.</li>
+
+
+
+<li>With the engine off, a healthy battery should read at or north of 12.6 volts.</li>
+
+
+
+<li>After jumping your Sable (see below), the voltage should read somewhere between 13.5 and 14.5 volts.&nbsp; If it’s lower than that, the alternator is probably bad.</li>
+</ol>
+
+
+<p><iframe title="YouTube video player" src="https://www.youtube.com/embed/COJr7OB23Hw" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+
+
+<p>If you don’t have a multimeter available, you can take your battery to the local parts store, and they’ll test it for free.&nbsp; You’ll have to pull it and have someone run it up there with you.&nbsp; It takes a little while, they’ll charge it for you and see if it holds a charge.&nbsp; Be prepared to wait a bit.</p>
+
+
+
+<p><strong>How to Jump Start Your Sable</strong></p>
+
+
+
+<p>If you believe your battery is too low to start your car, jump starting it will get you back on the road. Here&#8217;s how to do it:</p>
+
+
+
+<figure class="wp-block-image size-full"><a href="../wp-content/uploads/2022/09/Jump-Start-Vehicle.jpg"><picture decoding="async" class="wp-image-274718">
+<source type="image/webp" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/09/Jump-Start-Vehicle.jpg.webp 500w, https://mlabs.info/wp-content/uploads/2022/09/Jump-Start-Vehicle-300x200.jpg.webp 300w" srcset="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%20500%20334&#039;%3E%3C/svg%3E" data-lazy-sizes="(max-width: 500px) 100vw, 500px"/>
+<img decoding="async" width="500" height="334" src="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%20500%20334&#039;%3E%3C/svg%3E" alt="Jump Start Flashing Dash Light Fix" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/09/Jump-Start-Vehicle.jpg 500w, https://mlabs.info/wp-content/uploads/2022/09/Jump-Start-Vehicle-300x200.jpg 300w" data-lazy-sizes="(max-width: 500px) 100vw, 500px" data-lazy-src="../wp-content/uploads/2022/09/Jump-Start-Vehicle.jpg"/>
+</picture>
+<noscript><picture decoding="async" class="wp-image-274718">
+<source type="image/webp" srcset="https://mlabs.info/wp-content/uploads/2022/09/Jump-Start-Vehicle.jpg.webp 500w, https://mlabs.info/wp-content/uploads/2022/09/Jump-Start-Vehicle-300x200.jpg.webp 300w" sizes="(max-width: 500px) 100vw, 500px"/>
+<img decoding="async" width="500" height="334" src="../wp-content/uploads/2022/09/Jump-Start-Vehicle.jpg" alt="Jump Start Flashing Dash Light Fix" srcset="https://mlabs.info/wp-content/uploads/2022/09/Jump-Start-Vehicle.jpg 500w, https://mlabs.info/wp-content/uploads/2022/09/Jump-Start-Vehicle-300x200.jpg 300w" sizes="(max-width: 500px) 100vw, 500px"/>
+</picture>
+</noscript></a></figure>
+
+
+
+<ol>
+<li><strong>Connect to the positive terminals first</strong>: Connect the red jumper cable to your car&#8217;s positive battery terminal, then connect the other end to the running vehicle&#8217;s positive battery terminal.</li>
+
+
+
+<li><strong>Connect to the negative terminals</strong>: Connect the black jumper cable to your car&#8217;s ground terminal. Then connect the other ground wire to a good ground source on the running vehicle. There&#8217;ll usually be a spot close to the battery labeled ground. Any engine or accessory bolt that&#8217;s clean will usually work fine. The ground on the running vehicle&#8217;s battery will technically do the job too, but there&#8217;s a small chance that hooking up this way can start a fire at the battery, so don&#8217;t do it.</li>
+
+
+
+<li><strong>Do nothing</strong>: Let the battery charge for a few minutes.</li>
+
+
+
+<li><strong>Engage your Sable&#8217;s Starter</strong>: If it seems like it&#8217;s acting differently (flashing less or trying to start), adjust the jumper cable contacts and let it charge some more.</li>
+
+
+
+<li><strong>Remove the jumper cables</strong>: Reverse the process.</li>
+</ol>
+
+
+
+<h3>3. Faulty Starter Motor (Somewhat Likely)</h3>
+
+
+
+<figure class="wp-block-image size-large"><a href="../wp-content/uploads/2022/12/Starter-Motor-scaled.jpg"><picture decoding="async" class="wp-image-295490">
+<source type="image/webp" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-1024x569.jpg.webp 1024w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-300x167.jpg.webp 300w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-768x426.jpg.webp 768w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-1536x853.jpg.webp 1536w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-2048x1137.jpg.webp 2048w" srcset="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%201024%20569&#039;%3E%3C/svg%3E" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px"/>
+<img decoding="async" width="1024" height="569" src="data:image/svg+xml,%3Csvg%20xmlns=&#039;http://www.w3.org/2000/svg&#039;%20viewBox=&#039;0%200%201024%20569&#039;%3E%3C/svg%3E" alt="Starter motor clicking" data-lazy-srcset="https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-1024x569.jpg 1024w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-300x167.jpg 300w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-768x426.jpg 768w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-1536x853.jpg 1536w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-2048x1137.jpg 2048w" data-lazy-sizes="(max-width: 1024px) 100vw, 1024px" data-lazy-src="../wp-content/uploads/2022/12/Starter-Motor-1024x569.jpg"/>
+</picture>
+<noscript><picture decoding="async" class="wp-image-295490">
+<source type="image/webp" srcset="https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-1024x569.jpg.webp 1024w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-300x167.jpg.webp 300w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-768x426.jpg.webp 768w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-1536x853.jpg.webp 1536w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-2048x1137.jpg.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px"/>
+<img decoding="async" width="1024" height="569" src="../wp-content/uploads/2022/12/Starter-Motor-1024x569.jpg" alt="Starter motor clicking" srcset="https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-1024x569.jpg 1024w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-300x167.jpg 300w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-768x426.jpg 768w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-1536x853.jpg 1536w, https://mlabs.info/wp-content/uploads/2022/12/Starter-Motor-2048x1137.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px"/>
+</picture>
+</noscript></a></figure>
+
+
+
+<p>After you’ve confirmed that the battery voltage is OK and the battery terminals are tight and corrosion free, the next most likely cause of a clicking noise and no start condition is a bad starter motor.</p>
+
+
+
+<p>A bad starter will usually make more of a clunk than a click when turning the key forward.</p>
+
+
+
+<p>If you’re stranded, you can always take a hammer to the starter and see if that’ll get it to turn over.&nbsp;</p>
+
+
+
+<h3>4. Bad Ground Connection to the Starter</h3>
+
+
+
+<p>Your Sable&#8217;s starter uses a strong ground cable that should be securely bolted to the engine.&nbsp; If the connection has gotten weak due to corrosion, melting, or rodent damage, the vehicle won’t be able to start.</p>
+
+
+
+<p>A quick visual inspection will quickly tell you if anything is wrong and only takes a few seconds.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2>Conclusion: Mercury Sable Clicking and Won&#8217;t Start</h2>
+
+
+
+<p>A dead battery is the most common cause of a clicking sound and no start in the Mercury Sable.&nbsp; Checking the battery cables is something that you can do on the spot and fast.&nbsp; </p>
+
+
+
+<p>If you have to jump-start your car, make sure to drive it straight to a place that will test your car’s battery.&nbsp; Otherwise, it might not start again when you park.</p>
+		</div>
+
+				<footer class="entry-meta" aria-label="Entry meta">
+			<span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"><path d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z" /></svg></span><span class="screen-reader-text">Categories </span><a href="../category/mercury-sable/index.html" rel="category tag">Mercury Sable</a></span> 		<nav id="nav-below" class="post-navigation" aria-label="Posts">
+			<div class="nav-previous"><span class="gp-icon icon-arrow-left"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 138.212c0 2.265-1.133 4.813-2.832 6.512L64.276 256.001l111.317 111.277c1.7 1.7 2.832 4.247 2.832 6.513 0 2.265-1.133 4.813-2.832 6.512L161.43 394.46c-1.7 1.7-4.249 2.832-6.514 2.832-2.266 0-4.816-1.133-6.515-2.832L16.407 262.514c-1.699-1.7-2.832-4.248-2.832-6.513 0-2.265 1.133-4.813 2.832-6.512l131.994-131.947c1.7-1.699 4.249-2.831 6.515-2.831 2.265 0 4.815 1.132 6.514 2.831l14.163 14.157c1.7 1.7 2.832 3.965 2.832 6.513z" fill-rule="nonzero" /></svg></span><span class="prev"><a href="../mercury-villager-clicking-noise-but-wont-start-how-to-fix-fast/index.html" rel="prev">Mercury Villager: Clicking Noise But Won’t Start &#8211; How to Fix Fast</a></span></div><div class="nav-next"><span class="gp-icon icon-arrow-right"><svg viewBox="0 0 192 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M178.425 256.001c0 2.266-1.133 4.815-2.832 6.515L43.599 394.509c-1.7 1.7-4.248 2.833-6.514 2.833s-4.816-1.133-6.515-2.833l-14.163-14.162c-1.699-1.7-2.832-3.966-2.832-6.515 0-2.266 1.133-4.815 2.832-6.515l111.317-111.316L16.407 144.685c-1.699-1.7-2.832-4.249-2.832-6.515s1.133-4.815 2.832-6.515l14.163-14.162c1.7-1.7 4.249-2.833 6.515-2.833s4.815 1.133 6.514 2.833l131.994 131.993c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero" /></svg></span><span class="next"><a href="../mercury-mountaineer-clicking-noise-but-wont-start-how-to-fix-fast/index.html" rel="next">Mercury Mountaineer: Clicking Noise But Won’t Start &#8211; How to Fix Fast</a></span></div>		</nav>
+				</footer>
+			</div>
+</article>
+		</main>
+	</div>
+
+	<div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+	<div class="inside-right-sidebar">
+		<aside id="block-53" class="widget inner-padding widget_block widget_recent_comments"><ol class="has-excerpts wp-block-latest-comments"><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><a class="wp-block-latest-comments__comment-author" href="../author/jasonrplumbgmail-com/index.html">Jason</a> on <a class="wp-block-latest-comments__comment-link" href="../p0320-mazda-6/index.html#comment-29122">Mazda 6 P0320: Meaning, Causes, &amp; Diagnosis</a></footer><div class="wp-block-latest-comments__comment-excerpt"><p>That is RIDICULOUS, Cheryl. You can't get anything right now...</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Cheryl</span> on <a class="wp-block-latest-comments__comment-link" href="../p0320-mazda-6/index.html#comment-29120">Mazda 6 P0320: Meaning, Causes, &amp; Diagnosis</a></footer><div class="wp-block-latest-comments__comment-excerpt"><p>RECALLS! January 2022 Jason, “MAZDA6 shuts down while driving” fuel pump not monitored, may be no engine light etc. SEE&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">James Greer</span> on <a class="wp-block-latest-comments__comment-link" href="../gm-automatic-transmissions/4l60e-identification/index.html#comment-28397">4L60E Identification:  Complete Guide</a></footer><div class="wp-block-latest-comments__comment-excerpt"><p>I think it's a 15 pin plug and two wires change on the plug fro 95 to. 97 it's a&hellip;</p>
+</div></article></li><li class="wp-block-latest-comments__comment"><article><footer class="wp-block-latest-comments__comment-meta"><span class="wp-block-latest-comments__comment-author">Patrick Crawford Jr</span> on <a class="wp-block-latest-comments__comment-link" href="../gm-automatic-transmissions/4l60e-identification/index.html#comment-28332">4L60E Identification:  Complete Guide</a></footer><div class="wp-block-latest-comments__comment-excerpt"><p>I have a 2007 h3 hummer base model. Had transmission rebuilt (Pro).My problem is that when it gets around 35&hellip;</p>
+</div></article></li></ol></aside>	</div>
+</div>
+
+	</div>
+</div>
+
+
+<div class="site-footer">
+			<footer class="site-info" aria-label="Site"  itemtype="https://schema.org/WPFooter" itemscope>
+			<div class="inside-site-info grid-container">
+								<div class="copyright-bar">
+					<span class="copyright">&copy; 2023 Mlabs Info</span> &bull; 				</div>
+			</div>
+		</footer>
+		</div>
+
+<script type="rocketlazyloadscript" id="generate-a11y">!function(){"use strict";if("querySelector"in document&&"addEventListener"in window){var e=document.body;e.addEventListener("mousedown",function(){e.classList.add("using-mouse")}),e.addEventListener("keydown",function(){e.classList.remove("using-mouse")})}}();</script><!--[if lte IE 11]>
+<script src='https://mlabs.info/wp-content/themes/generatepress/assets/js/classList.min.js?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+<script id='generate-menu-js-extra'>
+var generatepressMenu = {"toggleOpenedSubMenus":"1","openSubMenuLabel":"Open Sub-Menu","closeSubMenuLabel":"Close Sub-Menu"};
+</script>
+<script src='../wp-content/themes/generatepress/assets/js/menu.mine1e3.js?ver=3.2.4' id='generate-menu-js' defer></script>
+<script data-minify="1" src='../wp-content/cache/min/1/wp-content/plugins/aawp/assets/dist/js/main38d1.js?ver=1651522398' id='aawp-js' defer></script>
+	<script src='../../stats.wp.com/e-202304.js' defer></script>
+	<script>
+		_stq = window._stq || [];
+		_stq.push([ 'view', {v:'ext',blog:'66702592',post:'295869',tz:'-6',srv:'mlabs.info',j:'1:11.7'} ]);
+		_stq.push([ 'clickTrackerInit', '66702592', '295869' ]);
+	</script><script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="../wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>
+</body>
+</html>
+
+<!--  - Debug: cached@1674818872 -->
